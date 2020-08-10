@@ -1,1 +1,1 @@
-# Weather_Dashboard
+<h1 align="center">Weather Dashboard</h1>
