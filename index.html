@@ -2,43 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
 </head>
 
 <body>
     <div class="jumbotron jumbotron-fluid bg-light">
         <div class="container">
             <h1 class="display-4" align="center">Weather Dashboard</h1>
-            <p class="lead" align="center">Below are forecasts and temperatures for the dates selected</p>
+            <p class="lead" align="center">Below are forecasts and temperatures for the city selected</p>
         </div>
     </div>
-
-    <nav class="navbar navbar-light bg-light">
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search for a City" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </nav>
+    <form id="city-form">
+        <label for="city-input">Search for a City</label>
+        <input type="text" id="city-input"><br>
 
 
+        <input id="find-city" type="submit" value="City Search">
+    </form>
 
 
+    <div id="city-view"></div>
 
-
-
-
-
-
-
-
-
-
-<script src="http://maps.openweathermap.org/maps/2.0/weather/TA2/{z}/{x}/{y}?date=1527811200&
-opacity=0.9&fill_bound=true&appid={c5fbb84da689821daa1431f435ac953d}"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"></script>
+    <script src="test.js"></script>
 </body>
 
 </html>
