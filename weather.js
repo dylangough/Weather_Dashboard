@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // VARIABLES
+
   var authKey = "4d19f8e36147b6ce71412f3e4f0edea5";
   var currentDay = moment().format("LL");
   var citySearch = "";
@@ -7,7 +7,6 @@ $(document).ready(function () {
   for (var i = 0; i < location.length; i++) {
     createButton(location[i]);
   }
-
   function createButton(citySearch) {
     var newButton = $("<button>");
     newButton.addClass("btn btn-secondary");
@@ -41,15 +40,6 @@ $(document).ready(function () {
       var lon = response.coord.lon;
       var queryTwo = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${authKey}`;
 
-      $(".weather").html(
-        "Conditions: " +
-        response.weather[0].description +
-        " <img src='https://openweathermap.org/img/w/" +
-        response.weather[0].icon +
-        ".png'>"
-      );
-
-      //One Call API
       $.ajax({
         url: queryTwo,
         method: "GET",
@@ -67,7 +57,6 @@ $(document).ready(function () {
         $(".humidity").html("Humidity: " + humidity + "%");
         $(".wind").html("Wind Speed: " + windSpeed + " mph");
         $(".uvIndex").html("UV Index: " + uvi);
-
 
         var dayTwoIcon = responseTwo.daily[1].weather[0].icon;
         var dayThreeIcon = responseTwo.daily[2].weather[0].icon;
@@ -97,7 +86,6 @@ $(document).ready(function () {
           $("#dayOneContent").text(
             "Temperature: " + dayOneTemp + "℉" + "  Humidity: " + dayOneH + "%"
           );
-
           $("#day2").html(moment().add(2, "days").format("ddd D"));
           $("#dayTwoContent").html(
             "Temperature: " + dayTwoTemp + "℉" + "  Humidity: " + dayTwoH + "%"
@@ -107,12 +95,10 @@ $(document).ready(function () {
           $("#dayThreeContent").html(
             "Temperature: " + dayThreeTemp + "℉" + "  Humidity: " + dayThreeH + "%"
           );
-
           $("#day4").html(moment().add(4, "days").format("ddd D"));
           $("#dayFourContent").html(
             "Temperature: " + dayFourTemp + "℉" + "  Humidity: " + dayFourH + "%"
           );
-
           $("#day5").html(moment().add(5, "days").format("ddd D"));
           $("#dayFiveContent").html(
             "Temperature: " + dayFiveTemp + "℉" + "  Humidity: " + dayFiveH + "%"
@@ -122,7 +108,6 @@ $(document).ready(function () {
       });
     });
   }
-  // On Click
   $("#searchBtn").on("click", function () {
     citySearch = $("#search").val().trim();
 
