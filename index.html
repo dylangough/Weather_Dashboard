@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>City Weather Dashboard</title>
@@ -16,7 +15,7 @@
 <body>
     <div class="jumbotron">
         <h1 class="display-4 jumbo-title">WEATHER DASHBOARD</h1>
-        <p class="lead jumbo-subtitle">below are forecasts for the selected City</p>
+        <p class="lead jumbo-subtitle">below are forecasts for the selected city</p>
     </div>
     <nav class="navbar sticky-top navbar-light bg-primary justify-content-left">
         <form>
@@ -32,7 +31,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <br><br>
+            <hr>
         </div>
         <div class="row">
             <div class="btn-group-vertical city-name-btn col-lg-3" id="btn-group">
@@ -48,45 +47,40 @@
                     <h1 class="temperature"></h1>
                 </div>
                 <ul class="list-group list-group-fixed">
-                    <li class="list-group-item description"></li>
                     <li class="list-group-item humidity"></li>
-                    <li class="list-group-item wind"></li>
+                    <li class="list-group-item description"></li>
                     <li class="list-group-item uvIndex"></li>
+                    <li class="list-group-item wind"></li>
                 </ul>
             </div>
             <div class="col-lg-6 hide future-forecast">
                 <h5 id="five-day-title">Coming Days Forecast</h5>
                 <ul class="list-unstyled">
                     <li class="media">
-                        <img src="" class="mr-3" alt="weather icon">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1" id="day1"></h5>
                             <p id="dayOneContent"></p>
                         </div>
                     </li>
                     <li class="media my-4">
-                        <img src="" class="mr-3" alt="weather icon">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1" id="day2">List-based media object</h5>
                             <p id="dayTwoContent"></p>
                         </div>
                     </li>
                     <li class="media">
-                        <img src="" class="mr-3" alt="weather icon">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1" id="day3">List-based media object</h5>
                             <p id="dayThreeContent"></p>
                         </div>
                     </li>
                     <li class="media my-4">
-                        <img src="" class="mr-3" alt="weather icon">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1" id="day4">List-based media object</h5>
                             <p id="dayFourContent"></p>
                         </div>
                     </li>
                     <li class="media">
-                        <img src="" class="mr-3" alt="weather icon">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1" id="day5">List-based media object</h5>
                             <p id="dayFiveContent"></p>
