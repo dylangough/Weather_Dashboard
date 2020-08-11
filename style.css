@@ -1,0 +1,43 @@
+.jumbo-title{
+    font-family: 'Nunito';
+    font-size: 100pt;
+}
+
+.jumbo-subtitle {
+    margin-top: -35px;
+    margin-left: 35px;
+    font-family: 'Nunito';
+    font-size: 20pt
+}
+
+.navbar {
+    margin-top: -100px;
+}
+
+#weather-icon img {
+    margin-left: 77px;
+}
+
+.card-body h1{
+    font-size: 55pt;
+    text-align: left;
+}
+
+.city-name {
+    font-size: 25pt;
+    text-align: left;
+}
+
+.card-title {
+    text-align: left;
+}
+
+#five-day-title {
+    padding: 5px;
+    margin: 10px;
+    text-align: left;
+}
+
+.hide {
+    display: none;
+}
